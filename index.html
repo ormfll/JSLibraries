@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Four Seasons Travel</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Glide CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+ 
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="main-nav">
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="Logo" />
+    </div>
+    <ul>
+      <li><a href="#seasons">Seasons</a></li>
+      <li><a href="#activities">Activities</a></li>
+      <li><a href="#quiz">Quiz</a></li>
+      <li><button id="dark-toggle">🌙</button></li>
+      <li><a href="#contact" class="nav-btn">Book your Adventure</a></li>
+    </ul>
+  </nav>
+  
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-graphic">
+      <img src="assets/images/airplanewindow.png" alt="Seasons illustration" />
+    </div>
+    <div class="hero-text">
+      <h1>YOUR NEXT SEASONAL ESCAPE AWAITS!</h1>
+      <p>Pick the perfect season to match your mood and adventure style</p>
+      <button class="main-btn" onclick="document.getElementById('seasons').scrollIntoView({ behavior: 'smooth' })"><h2>Explore Seasons</h2></button>
+    </div>
+  </section>
+
+<!-- Seasons -->
+<section id="seasons" class="seasons-row">
+    <h2 class="section-title">Discover your next destination during your favorite season</h2>
+    
+    <div class="season" id="spring">
+      <div id="spring-animation" class="anim-bg"></div>
+      <h2>SPRING ESCAPES</h2>
+      <p>Cherry blossoms, gentle hikes, and fresh air</p>
+      <div id="map-spring" class="map"></div>
+    </div>
+    
+    <div class="season" id="summer">
+      <div id="summer-animation" class="anim-bg"></div>
+      <h2>SUMMER ADVENTURES</h2>
+      <p>Beach escapes, sun-soaked days, and vibrant nights</p>
+      <div id="map-summer" class="map"></div>
+    </div>
+    
+    <div class="season" id="autumn">
+      <div id="autumn-animation" class="anim-bg"></div>
+      <h2>AUTUMN RETREATS</h2>
+      <p>Golden forests, cozy cabins, and crisp air getaways</p>
+      <div id="map-autumn" class="map"></div>
+    </div>
+    
+    <div class="season" id="winter">
+      <div id="winter-animation" class="anim-bg"></div>
+      <h2>WINTER WONDERS</h2>
+      <p>Snowy escapes, cozy fires, and magical adventures</p>
+      <div id="map-winter" class="map"></div>
+    </div>
+  </section>
+  
+
+  <!-- Activities -->
+  <section id="activities" class="activities-row">
+    <h2>Top Activities</h2>
+    <p>Discover these top-rated seasonal activities curated by TripAdvisor</p>
+    <div class="activities-cards">
+      <a href="https://www.tripadvisor.com/" target="_blank" class="activity-card trip-card">
+        <img src="assets/images/spring1.jpg" alt="Spring activity">
+        <h2>Spring Picnics</h2>
+      </a>
+      <a href="https://www.tripadvisor.com/" target="_blank" class="activity-card trip-card">
+        <img src="assets/images/summer1.jpg" alt="Summer activity">
+        <h2>Beach Surfing</h2>
+      </a>
+      <a href="https://www.tripadvisor.com/" target="_blank" class="activity-card trip-card">
+        <img src="assets/images/autumn1.jpg" alt="Autumn activity">
+        <h2>Forest Walks</h2>
+      </a>
+      <a href="https://www.tripadvisor.com/" target="_blank" class="activity-card trip-card">
+        <img src="assets/images/winter1.jpg" alt="Winter activity">
+        <h2>Ski Adventures</h2>
+      </a>
+    </div>
+  </section>
+
+  <!-- Interactive Travel Quiz -->
+  <section id="quiz" class="quiz-row">
+    <div id="flamingo-canvas"></div>
+    <h2>DISCOVER YOUR PERFECT SEASON</h2>
+    <p>Answer a few fun questions to find your ideal travel season!</p>
+    <button class="main-btn" id="start-quiz">Start Quiz</button>
+  </section>
+
+
+  <!-- Contact -->
+  <section id="contact" class="contact-row">
+    <div class="contact-image">
+      <img src="assets/images/clouds.jpg" alt="Clouds" />
+    </div>
+    <div class="contact-form">
+      <h2>LET'S BOOK YOUR NEXT ADVENTURE!</h2>
+      <p>Let our experts design the perfect trip tailored to your preferences.</P>
+      <form>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="favourite season" name="season" placeholder="Your Favourite Season(s)" required>
+        <div class="date-row">
+            <input type="date" name="start-date" placeholder="From" required>
+            <input type="date" name="end-date" placeholder="To" required>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Aventi Travel. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <script src="assets/js/springSketch.js"></script>
+  <script src="assets/js/summerSketch.js"></script>
+  <script src="assets/js/autumnSketch.js"></script>
+  <script src="assets/js/winterSketch.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="assets/js/flamingoSketch.js"></script>
+
+  <script>
+    AOS.init();
+    new Glide('.testimonials-glide', {
+      type: 'carousel',
+      perView: 1,
+      autoplay: 3000,
+      hoverpause: true
+    }).mount();
+  </script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

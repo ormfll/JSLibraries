@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@500;600&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.main-nav {
+  position: fixed;
+  width: 100%;
+  height: 4%;
+  top: 0;
+  background-color: #372f6f;
+  padding: 10px 40px;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav .logo img {
+  height: 30px;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.main-nav li {
+  margin: 0 10px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600; 
+}
+
+.nav-btn {
+  padding: 10px 18px;
+  margin-right: 40px;
+  background-color: #cdff5a;
+  border-radius: 50px;
+  font-weight: 600;
+  color: #372f6f !important;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.nav-btn:hover {
+  background-color: #c2db85;
+}
+
+
+#dark-toggle {
+  padding: 6px 12px;
+  background: #2e2052;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background:
+    linear-gradient(rgba(88, 86, 201, 0.6), rgba(176, 174, 228, 0.4)),
+    url('../images/clouds.jpg') no-repeat center/cover;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero-text h1 {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 3rem;
+  color: #fff;
+  margin: 0 0 10px 0;
+}
+
+.hero-text p {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.main-btn {
+  margin-top: 10px;
+  padding: 6px 24px;
+  background-color: #5040bd;
+  color: #dbf4a0;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(252, 241, 173, 0.2);
+  font-size: 0.8rem;
+}
+
+.hero-graphic img {
+  max-width: 300px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.seasons-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.season {
+  flex: 1 1 300px;
+  max-width: 400px;
+  background: #f6f5f7;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(151, 136, 168, 0.2);
+}
+
+.section-title {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  color: #372f6f;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.season h2 {
+  font-family: 'Archivo Black', sans-serif;
+  color: #372f6f;
+}
+
+.season p {
+  color: #372f6f;
+  font-size: 1rem;
+}
+
+.map {
+  height: 250px;
+  margin: 20px auto;
+  max-width: 350px;
+  border-radius: 8px;
+}
+
+.activities-row {
+  padding: 100px 20px;
+  text-align: center;
+  background-color: #f0ebff;
+}
+
+.activities-row h2 {
+  font-size: 2.2rem;
+  color: #372f6f;
+  margin-top: 0;
+}
+
+.activities-row p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 600px;
+  margin: 10px auto 30px;
+}
+
+.activities-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.activity-card.trip-card {
+  background: #6C5CE7;
+  color: white;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  padding: 0px;
+  border-radius: 15px;
+  flex: 1 1 300px;
+  max-width: 320px;
+  text-decoration: none;
+}
+
+.activity-card.trip-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.activity-card.trip-card h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: white;
+  margin-top: 20px;
+}
+
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-image {
+  flex: 1;
+}
+
+.contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}
+
+.contact-form h2 {
+  font-size: 2rem;
+  color: #372f6f;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: 'Archivo Black', sans-serif;  
+}
+
+form input[type="date"] {
+  background-color: #f6f5f7;
+  border: 1px solid #ccc;
+  color: #372f6f;
+  font-family: 'Inter', sans-serif;
+}
+
+form input, form button {
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.date-row {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.date-row input[type="date"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+form button {
+  margin-top: 10px;
+  padding: 16px 24px;
+  background-color: #5040bd;
+  color: #dbf4a0;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(252, 241, 173, 0.2);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+footer {
+  background-color: #372f6f;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.dark-mode .main-nav {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .main-nav a {
+  color: #f0f0f0;
+}
+
+body.dark-mode .main-btn,
+body.dark-mode form button {
+  background-color: #f0f0f0;
+  color: #1e1e1e;
+}
+
+body.dark-mode footer {
+  background-color: #1e1e1e;
+}
+
+.quiz-row {
+  padding: 180px 20px;
+  text-align: center;
+  background-color: #372f6f;
+}
+
+.quiz-row h2 {
+  font-size: 2rem;
+  color: #dbf4a0;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: 'Archivo Black', sans-serif;
+}
+
+.quiz-row p {
+  font-size: 1.1rem;
+  color: #dbf4a0;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.quiz-row button {
+  margin-top: 10px;
+  padding: 16px 24px;
+  background-color: #e2e1ec;
+  color: #5040bd;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(252, 241, 173, 0.2);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+#flamingo-canvas {
+  width: 200px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .main-nav {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode .main-nav a {
+  color: #e0e0e0;
+}
+
+body.dark-mode .nav-btn {
+  background-color: #e0e0e0;
+  color: #1f1f1f !important;
+}
+
+body.dark-mode .nav-btn:hover {
+  background-color: #cccccc;
+}
+
+body.dark-mode #dark-toggle {
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+body.dark-mode .hero {
+  background: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)),
+              url('../images/clouds.jpg') no-repeat center/cover;
+}
+
+body.dark-mode .hero-text h1,
+body.dark-mode .hero-text p {
+  color: #e0e0e0;
+}
+
+body.dark-mode .main-btn {
+  background-color: #e0e0e0;
+  color: #1f1f1f;
+}
+
+body.dark-mode .section-title,
+body.dark-mode .season h2,
+body.dark-mode .season p,
+body.dark-mode .activities-row h2,
+body.dark-mode .activities-row p,
+body.dark-mode .activity-card.trip-card h2,
+body.dark-mode .contact-form h2,
+body.dark-mode .contact-form p,
+body.dark-mode .quiz-row h2,
+body.dark-mode .quiz-row p {
+  color: #e0e0e0;
+}
+
+body.dark-mode .season {
+  background-color: #1f1f1f;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .activities-row {
+  background-color: #2a2a2a;
+}
+
+body.dark-mode .activity-card.trip-card {
+  background-color: #333;
+}
+
+body.dark-mode form input {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  border: 1px solid #555;
+}
+
+body.dark-mode form input::placeholder {
+  color: #bbb;
+}
+
+body.dark-mode form button {
+  background-color: #e0e0e0;
+  color: #1f1f1f;
+}
+
+body.dark-mode footer {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode .quiz-row {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode .quiz-row button {
+  background-color: #e0e0e0;
+  color: #1f1f1f;
+}
